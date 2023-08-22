@@ -63,7 +63,13 @@ export default function Index() {
                   、70+市场覆盖省份人才团队200+、合作伙伴300+、优秀案例2000+、地产动面案例1000+、VR系统案例800+、数字体验中心300+、三维互动200+。四大核心板块:三维影视动画、云间系列产品、云台系列产品、数宇内容展厅
                 </p>
               </div>
-              <div>了解更多</div>
+
+              <div className="flex h-[100px]">
+                <div className="btn-container">
+                  <button>了解更多</button>
+                </div>
+              </div>
+              {/* <div>了解更多</div> */}
             </div>
             {/* 2 absolute bottom-0 right-0*/}
             <div className=" h-[450px] w-auto ">
@@ -78,13 +84,16 @@ export default function Index() {
           <div className=" w-full absolute bottom-0 left-0  h-[50px] bg-[#3b82f6] md:w-full "></div>
         </div>
 
+        
+
         <div className="max-w-7xl mx-auto px-4 py-16 from-gray-300 to-gray-700">
           <div className="py-2 text-center mb-4">
-            <h2 className="text-center text-xl mb-2 dark:text-gray-300">iWebsite 的优点</h2>
+            <h2 className="text-center text-xl mb-2 dark:text-gray-300">产品和服务</h2>
             <p className="text-xs text-gray-400">当然不止这些</p>
           </div>
           <div className="flex flex-wrap md:flex-nowrap justify-between mb-4 w-full">
-            {list.map((item) => {
+            
+            {/* {list.map((item) => {
               return (
                 <div
                   className="h-1/2 md:h-1/4 mx-2 p-2 mb-8 md:mb-1 rounded-md shadow cursor-pointer hover:shadow-md"
@@ -96,113 +105,11 @@ export default function Index() {
                   </p>
                 </div>
               )
-            })}
+            })} */}
           </div>
         </div>
 
-        {/* <Footer /> */}
-        <footer className="bg-[#3b82f6] text-white py-8">
-          {/* mx-auto  容器自动居中 */}
-          <div className="container mx-auto grid grid-cols-1  md:grid-cols-5 gap-4">
-            <div className="ml-8">
-              <h3 className="font-bold text-xl mb-4">关于我们</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    公司简介
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    荣誉资质
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    团队招聘
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="ml-8">
-              <h3 className="font-bold text-xl mb-4">产品系列</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    云台系列
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    云台系列
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    云台系列
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="ml-8">
-              <h3 className="font-bold text-xl mb-4">服务案例</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    云台系列
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    云台系列
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    云台系列
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    云台系列
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="ml-8">
-              <h3 className="font-bold text-xl mb-4">智慧体验</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    智慧体验
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="ml-8">
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    电话：10080-10086
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    WEB：www.hongliankeji.com
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-400">
-                    地址：江西省萍乡市上栗县供销合作社
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="container mx-auto mt-4 text-center">
-            <p>&copy; 2023 My Website. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </main>
       <style jsx>
         {`
@@ -210,6 +117,30 @@ export default function Index() {
             bottom: -50px;
             margin-top: -50px;
             z-index: 1000;
+          }
+
+          .btn-container {
+            position: relative;
+          }
+
+           {
+            /*  padding: 15px 20px 16px 60px; */
+          }
+          button {
+            border: 0;
+            border-radius: 50px;
+            color: white;
+            background: #5f55af;
+            padding: 15px 60px 16px 60px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #f72585 50%, #5f55af 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all 2s ease;
+          }
+
+          button:hover {
+            background-position: left bottom;
           }
         `}
       </style>

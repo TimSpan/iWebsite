@@ -1,3 +1,5 @@
+
+// 这个路由并不是真正的路由，而用用于判断当前页面的路由数组
 export const router = [
   {
     name: 'home',

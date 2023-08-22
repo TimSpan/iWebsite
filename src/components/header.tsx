@@ -7,6 +7,8 @@ import { ModeToggle } from '@/components/mode-toggle'
 
 export default function Header() {
   const router = useRouter()
+  // console.log('router', router)
+
   const [isOpen, setIsOpen] = useState(false)
   const currentRouter = routerList.find((e) => e.path === router.asPath)?.name
 
@@ -15,7 +17,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* 左侧 logo */}
-       
+
           <div className="flex-shrink-0 flex items-center">
             <IwsLink href="/">
               <Image
