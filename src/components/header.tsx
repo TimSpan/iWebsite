@@ -14,83 +14,88 @@ export default function Header() {
 
   return (
     <nav className="  border-y border-gray-200 dark:bg-slate-800 dark:border-gray-600">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/*  max-w-7xl max-w-screen-2xl*/}
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* 左侧 logo */}
-
-          <div className="flex-shrink-0 flex items-center">
-            <IwsLink href="/">
-              <Image
-                className="block h-8 w-auto cursor-pointer"
-                height={43.2}
-                width={80}
-                src="/logo.png"
-                alt="Logo"
-              />
-            </IwsLink>
-          </div>
-          {/* 右侧导航 */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-4 h-16">
-              <IwsLink
-                href="/"
-                // rounded-md
-                className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#3b82f6] hover:text-white  hover:dark:bg-gray-500 ${
-                  currentRouter === 'home'
-                    ? 'bg-[#3b82f6] text-white  dark:text-gray-100 dark:bg-gray-500'
-                    : ''
-                } px-3 text-sm font-medium`}
-              >
-                首页
+          <div className="flex items-center">
+            <div className=" md:inline-block h-16 flex flex-col justify-center items-center">
+              <IwsLink href="/">
+                <Image
+                  className="block h-8 w-auto cursor-pointer"
+                  height={52}
+                  width={188}
+                  src="/company_logo.png"
+                  alt="Logo"
+                />
               </IwsLink>
-              <IwsLink
-                href="/service"
-                // rounded-md
-                className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#3b82f6] hover:text-white  hover:dark:bg-gray-500 ${
-                  currentRouter === 'service'
-                    ? 'bg-[#3b82f6] text-white  dark:text-gray-100 dark:bg-gray-500'
-                    : ''
-                } px-3 text-sm font-medium`}
-              >
-                服务
-              </IwsLink>
-              <IwsLink
-                href="/case"
-                // rounded-md
-                className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#3b82f6] hover:text-white  hover:dark:bg-gray-500 ${
-                  currentRouter === 'case'
-                    ? 'bg-[#3b82f6] text-white  dark:text-gray-100 dark:bg-gray-500'
-                    : ''
-                } px-3 text-sm font-medium`}
-              >
-                案例
-              </IwsLink>
-              <IwsLink
-                href="/trade"
-                // rounded-md
-                className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#3b82f6] hover:text-white  hover:dark:bg-gray-500 ${
-                  currentRouter === 'trade'
-                    ? 'bg-[#3b82f6] text-white  dark:text-gray-100 dark:bg-gray-500'
-                    : ''
-                } px-3 text-sm font-medium`}
-              >
-                行业
-              </IwsLink>
-              <IwsLink
-                href="/about"
-                // rounded-md
-                className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#3b82f6] hover:text-white  hover:dark:bg-gray-500 ${
-                  currentRouter === 'about'
-                    ? 'bg-[#3b82f6] text-white  dark:text-gray-100 dark:bg-gray-500'
-                    : ''
-                } px-3 text-sm font-medium`}
-              >
-                关于我们
-              </IwsLink>
-
-              <ModeToggle />
+            </div>
+            {/* 右侧导航 */}
+            <div className=" hidden md:inline-block">
+              <div className="ml-10 flex items-center space-x-4 h-16">
+                <IwsLink
+                  href="/"
+                  // rounded-md
+                  className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#00A0E9] hover:text-white  hover:dark:bg-gray-500 ${
+                    currentRouter === 'home'
+                      ? 'bg-[#00A0E9] text-white  dark:text-gray-100 dark:bg-gray-500'
+                      : ''
+                  } px-3 text-sm font-medium`}
+                >
+                  首页
+                </IwsLink>
+                <IwsLink
+                  href="/service"
+                  // rounded-md
+                  className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#00A0E9] hover:text-white  hover:dark:bg-gray-500 ${
+                    currentRouter === 'service'
+                      ? 'bg-[#00A0E9] text-white  dark:text-gray-100 dark:bg-gray-500'
+                      : ''
+                  } px-3 text-sm font-medium`}
+                >
+                  服务
+                </IwsLink>
+                <IwsLink
+                  href="/case"
+                  // rounded-md
+                  className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#00A0E9] hover:text-white  hover:dark:bg-gray-500 ${
+                    currentRouter === 'case'
+                      ? 'bg-[#00A0E9] text-white  dark:text-gray-100 dark:bg-gray-500'
+                      : ''
+                  } px-3 text-sm font-medium`}
+                >
+                  案例
+                </IwsLink>
+                <IwsLink
+                  href="/trade"
+                  // rounded-md
+                  className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#00A0E9] hover:text-white  hover:dark:bg-gray-500 ${
+                    currentRouter === 'trade'
+                      ? 'bg-[#00A0E9] text-white  dark:text-gray-100 dark:bg-gray-500'
+                      : ''
+                  } px-3 text-sm font-medium`}
+                >
+                  行业
+                </IwsLink>
+                <IwsLink
+                  href="/about"
+                  // rounded-md
+                  className={`w-20 flex flex-col h-full justify-center items-center text-gray-600 dark:text-gray-100 hover:bg-[#00A0E9] hover:text-white  hover:dark:bg-gray-500 ${
+                    currentRouter === 'about'
+                      ? 'bg-[#00A0E9] text-white  dark:text-gray-100 dark:bg-gray-500'
+                      : ''
+                  } px-3 text-sm font-medium`}
+                >
+                  关于我们
+                </IwsLink>
+              </div>
             </div>
           </div>
+          <div className="flex items-center space-x-4 h-16">
+            <div>电话：10086-10086</div>
+            <ModeToggle />
+          </div>
+
           {/* 移动端折叠导航 */}
           <div className="-mr-2 flex items-center md:hidden">
             <button
@@ -113,6 +118,7 @@ export default function Header() {
           </div>
         </div>
       </div>
+
       {/* 移动端折叠菜单 */}
       <div className={`md:hidden ${isOpen ? '' : 'hidden'}`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 sm:px-3">
@@ -123,6 +129,30 @@ export default function Header() {
             } px-3 py-2 rounded-md text-base font-medium`}
           >
             首页
+          </IwsLink>
+          <IwsLink
+            href="/service"
+            className={`block text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 ${
+              currentRouter === 'about' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
+            } px-3 py-2 rounded-md text-base font-medium`}
+          >
+            服务
+          </IwsLink>
+          <IwsLink
+            href="/case"
+            className={`block text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 ${
+              currentRouter === 'about' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
+            } px-3 py-2 rounded-md text-base font-medium`}
+          >
+            案例
+          </IwsLink>
+          <IwsLink
+            href="/trade"
+            className={`block text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 ${
+              currentRouter === 'about' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
+            } px-3 py-2 rounded-md text-base font-medium`}
+          >
+            行业
           </IwsLink>
           <IwsLink
             href="/about"
