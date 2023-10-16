@@ -30,19 +30,20 @@ export default function Index() {
   return (
     <>
       <main className="dark:bg-slate-800">
-        <Header />
-        {/* px-4 py-2*/}
+        <div className="container mx-auto">
+          <Header />
+        </div>
+
         <div className="max-w-full mx-auto h-96 ">
           <div className="relative h-full">
             <Image src="/1_.png" alt="Banner" layout="fill" objectFit="cover" quality={100} />
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
             <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end">
-              <div className="text-left ml-14 mb-14">
-                {/* <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">鸿链科技</h1> */}
+              {/* ml-14 mb-14 */}
+              <div className="text-left container mx-auto h-96 p-4 md:h-[150px]">
                 <p className="text-3xl  text-white ">
                   我们不仅提供全球领先的云计算、大数据、人工智能技术
                 </p>
-
                 <p className="text-3xl text-white">我们更会提供高品质的产品与服务</p>
               </div>
             </div>
@@ -50,8 +51,8 @@ export default function Index() {
         </div>
 
         <div className=" h-[1000px] relative md:h-[500px] ">
-          <div className="container mx-auto relative   grid grid-cols-1    md:grid-cols-3 gap-4 h-[450px] ">
-            {/* 1 */}
+          {/* gap-4 */}
+          <div className="container mx-auto relative   grid grid-cols-1    md:grid-cols-3  justify-stretch h-[450px] ">
             <div className=" p-4  md:grid grid-rows-3 col-span-2 ">
               <div className="flex items-center ">
                 <h1 className="text-4xl">关于鸿链数字科技</h1>
@@ -71,49 +72,46 @@ export default function Index() {
                   </div>
                 </div>
               </IwsLink>
-              {/* <div>了解更多</div> */}
             </div>
-            {/* 2 absolute bottom-0 right-0*/}
-            <div className=" h-[450px] w-auto ">
-              <img
-                // index_bottom
-                className="h-[450px] w-auto "
-                src="/2_.png"
-                alt=""
-              />
+            {/* <div className=" h-[450px] w-auto">
+              <img className="h-[450px] w-auto " src="/2_.png" alt="" />
+            </div> */}
+            <div className=" h-[450px] w-auto _img_flex">
+              <img className="h-[450px] w-auto " src="/2_.png" alt="" />
             </div>
           </div>
           <div className=" w-full absolute bottom-0 left-0  h-[50px] bg-[#00A0E9] md:w-full "></div>
         </div>
-
         <div className="max-w-7xl mx-auto px-4 py-16 from-gray-300 to-gray-700">
           <div className="py-2 text-center mb-4">
             <h2 className="text-center text-xl mb-2 dark:text-gray-300">产品和服务</h2>
-            {/* <p className="text-xs text-gray-400">当然不止这些</p> */}
           </div>
-          <div className="flex flex-wrap md:flex-nowrap justify-between mb-4 w-full">
-            <div className="md:w-full flex justify-between ">
-              {/* className=" md:h-auto w-2/3 mr-2" */}
-              <div className=" md:h-72 w-2/3 mr-2 relative">
-                <Image
-                  src="/center_1.png"
-                  alt="center"
-                  layout="fill"
-                  objectFit="cover"
-                  quality={100}
-                />
-              </div>
-              <div className=" md:h-72 w-1/3 mr-2 relative">
-                <Image
-                  src="/center_2.png"
-                  alt="center"
-                  layout="fill"
-                  objectFit="cover"
-                  quality={100}
-                />
-              </div>
+          <div className="w-full md:flex justify-between">
+            <div className="relative">
+              <img
+                className="h-72 w-full md: w-2/3 mr-2 relative"
+                src="/center_1.png"
+                alt="center"
+              />
+              <span className="absolute">数字化政府</span>
             </div>
-            {/* {list.map((item) => {
+            <div>
+              <img
+                className="h-72 w-full md: w-2/3 mr-2 relative"
+                src="/center_2.png"
+                alt="center"
+              />
+            </div>
+
+            {/* <div className="h-72 w-full md: w-2/3 mr-2 relative">
+              <img className=" h-72" src="/center_1.png" alt="center" />
+            </div>
+            <div className="h-72 w-full md: w-1/3 mr-2 relative">
+              <img className=" h-72" src="/center_2.png" alt="center" />
+            </div> */}
+          </div>
+
+          {/* {list.map((item) => {
               return (
                 <div
                   className="h-1/2 md:h-1/4 mx-2 p-2 mb-8 md:mb-1 rounded-md shadow cursor-pointer hover:shadow-md"
@@ -126,7 +124,6 @@ export default function Index() {
                 </div>
               )
             })} */}
-          </div>
         </div>
 
         <Footer />
@@ -141,10 +138,6 @@ export default function Index() {
 
           .btn-container {
             position: relative;
-          }
-
-           {
-            /*  padding: 15px 20px 16px 60px; */
           }
           button {
             border: 0;
@@ -161,6 +154,10 @@ export default function Index() {
 
           button:hover {
             background-position: left bottom;
+          }
+          ._img_flex {
+            display: flex;
+            justify-content: flex-end;
           }
         `}
       </style>
