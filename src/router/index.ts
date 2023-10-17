@@ -5,10 +5,7 @@ export const router = [
     name: 'home',
     path: '/',
   },
-  {
-    name: 'about',
-    path: '/about',
-  },
+
   // 服务
   {
     name: 'service',
@@ -24,6 +21,10 @@ export const router = [
     name: 'trade',
     path: '/trade',
   },
-
+  // 关于我们
+  {
+    name: 'about',
+    path: '/about',
+  },
 
 ]

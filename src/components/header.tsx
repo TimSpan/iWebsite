@@ -11,21 +11,23 @@ export default function Header() {
   const currentRouter = routerList.find((e) => e.path === router.asPath)?.name
 
   return (
-    <div className="container">
-      <nav className=" border-y border-gray-200 dark:bg-slate-800 dark:border-gray-600">
+    <div className="container mx-auto">
+      {/* dark:border-gray-600  border-y*/}
+      <nav className=" border-gray-200 dark:bg-slate-800 ">
         <div className="w-full mx-auto  ">
           <div className="flex justify-between h-16">
             {/* logo */}
             <div className="flex items-center">
               <div className=" md:inline-block h-16 flex flex-col justify-center items-center">
                 <IwsLink href="/">
-                  <Image
+                  <Image src="/logo.svg" width="188" height="64" alt="Logo" />
+                  {/* <Image
                     className="block h-8 w-auto cursor-pointer"
                     height={52}
                     width={188}
                     src="/company_logo.png"
                     alt="Logo"
-                  />
+                  /> */}
                 </IwsLink>
               </div>
               {/* 右侧导航 */}
@@ -132,7 +134,7 @@ export default function Header() {
             <IwsLink
               href="/service"
               className={`block text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 ${
-                currentRouter === 'about' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
+                currentRouter === 'service' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
               } px-3 py-2 rounded-md text-base font-medium`}
             >
               服务
@@ -140,7 +142,7 @@ export default function Header() {
             <IwsLink
               href="/case"
               className={`block text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 ${
-                currentRouter === 'about' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
+                currentRouter === 'case' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
               } px-3 py-2 rounded-md text-base font-medium`}
             >
               案例
@@ -148,7 +150,7 @@ export default function Header() {
             <IwsLink
               href="/trade"
               className={`block text-gray-600 dark:text-gray-100 hover:bg-gray-200 hover:dark:bg-gray-500 ${
-                currentRouter === 'about' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
+                currentRouter === 'trade' ? 'bg-gray-200 dark:text-gray-100 dark:bg-gray-500' : ''
               } px-3 py-2 rounded-md text-base font-medium`}
             >
               行业

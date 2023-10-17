@@ -1,45 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
 import Header from './../components/header'
 import Footer from './../components/footer'
 import Image from 'next/image'
-// import './index.css'
 import IwsLink from '../components/IwsLink'
-/**
- * @_ 表示自己写的css 比如index_bottom
- */
+
 export default function Index() {
-  const list = [
-    {
-      title: '免费',
-      descript: '使用 iWebsite 构建网站是完全免费的，前提是您了解 Web 开发流程。',
-    },
-    {
-      title: 'SEO',
-      descript:
-        '得利于 Next.js 的 SSR 渲染，使得对 SEO 非常友好，您的网站可以很快的被搜索引擎收集。',
-    },
-    {
-      title: '简单',
-      descript: '您只需要使用 iWebsite 的模版，然后按照我们的步骤即可拥有一个属于自己的网站。',
-    },
-    {
-      title: '可扩展',
-      descript: 'iWebsite 仅提供基础的功能，如果您有其他的需求可以自己进行开发，或者联系我。',
-    },
-  ]
   return (
     <>
       <main className="dark:bg-slate-800">
-        <div className="container mx-auto">
-          <Header />
-        </div>
-
+        <Header />
         <div className="max-w-full mx-auto h-96 ">
           <div className="relative h-full">
             <Image src="/1_.png" alt="Banner" layout="fill" objectFit="cover" quality={100} />
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
             <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end">
-              {/* ml-14 mb-14 */}
               <div className="text-left container mx-auto h-96 p-4 md:h-[150px]">
                 <p className="text-3xl  text-white ">
                   我们不仅提供全球领先的云计算、大数据、人工智能技术
@@ -50,10 +23,9 @@ export default function Index() {
           </div>
         </div>
 
-        <div className=" h-[1000px] relative md:h-[500px] ">
-          {/* gap-4 */}
+        <div className="h-[1000px] relative md:h-[500px] ">
           <div className="container mx-auto relative   grid grid-cols-1    md:grid-cols-3  justify-stretch h-[450px] ">
-            <div className=" p-4  md:grid grid-rows-3 col-span-2 ">
+            <div className="p-4  md:grid grid-rows-3 col-span-2 ">
               <div className="flex items-center ">
                 <h1 className="text-4xl">关于鸿链数字科技</h1>
               </div>
@@ -73,14 +45,11 @@ export default function Index() {
                 </div>
               </IwsLink>
             </div>
-            {/* <div className=" h-[450px] w-auto">
-              <img className="h-[450px] w-auto " src="/2_.png" alt="" />
-            </div> */}
-            <div className=" h-[450px] w-auto _img_flex">
+            <div className="h-[450px] w-auto _img_flex">
               <img className="h-[450px] w-auto " src="/2_.png" alt="" />
             </div>
           </div>
-          <div className=" w-full absolute bottom-0 left-0  h-[50px] bg-[#00A0E9] md:w-full "></div>
+          <div className="w-full absolute bottom-0 left-0  h-[50px] bg-[#00A0E9] md:w-full "></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 py-16 from-gray-300 to-gray-700">
           <div className="py-2 text-center mb-4">
@@ -92,8 +61,7 @@ export default function Index() {
                 className="h-72 w-full md: w-2/3 mr-2 relative"
                 src="/center_1.png"
                 alt="center"
-              />
-              <span className="absolute">数字化政府</span>
+              ></img>
             </div>
             <div>
               <img
@@ -102,30 +70,8 @@ export default function Index() {
                 alt="center"
               />
             </div>
-
-            {/* <div className="h-72 w-full md: w-2/3 mr-2 relative">
-              <img className=" h-72" src="/center_1.png" alt="center" />
-            </div>
-            <div className="h-72 w-full md: w-1/3 mr-2 relative">
-              <img className=" h-72" src="/center_2.png" alt="center" />
-            </div> */}
           </div>
-
-          {/* {list.map((item) => {
-              return (
-                <div
-                  className="h-1/2 md:h-1/4 mx-2 p-2 mb-8 md:mb-1 rounded-md shadow cursor-pointer hover:shadow-md"
-                  key={item.title}
-                >
-                  <h3 className="text-center text-lg dark:text-gray-300">{item.title}</h3>
-                  <p className="block p-4 text-sm text-gray-500 tracking-wider leading-6">
-                    {item.descript}
-                  </p>
-                </div>
-              )
-            })} */}
         </div>
-
         <Footer />
       </main>
       <style jsx>

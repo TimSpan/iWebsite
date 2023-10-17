@@ -6,7 +6,7 @@ function Service() {
   return (
     <main className="dark:bg-slate-800">
       <Header />
-      <div> Service</div>
+      <div>服务</div>
       <Footer />
     </main>
   )
