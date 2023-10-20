@@ -1,7 +1,27 @@
 import Header from './../components/header'
 import Footer from './../components/footer'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 export default function About() {
+  const imageRef = useRef(null)
+  const mainBgRef = useRef(null)
+  const [imageHeight, setImageHeight] = useState(0)
+  useLayoutEffect(() => {
+    const updateImageHeight = () => {
+      setImageHeight(imageRef.current.clientHeight)
+    }
+    window.addEventListener('resize', updateImageHeight)
+    updateImageHeight()
+
+    return () => {
+      window.removeEventListener('resize', updateImageHeight)
+    }
+  }, [])
+
+  useLayoutEffect(() => {
+    mainBgRef.current.style.height = imageHeight + 'px'
+  }, [imageHeight])
+
   return (
     <>
       <main className="dark:bg-slate-800">
@@ -19,8 +39,8 @@ export default function About() {
         </div>
 
         <div className="container mx-auto h-96 p-4 text-center md:flex flex-col justify-evenly h-80">
-          <div className="_title">鸿链简介</div>
-          <div className="_subtitle">
+          <div className="_title dark:text-k_White-1">鸿链简介</div>
+          <div className="_subtitle dark:text-k_White-1">
             江西鸿链数字科技科技有限公司倾力打造的云计算品牌，面向全世界各个国家和地区的政府机构、企业组织和个人开发者，提供全球领
             先的云计算、大数据、人工智能等技术产品与服务，以卓越的科技能力打造丰富的行业解决方案，构建开放共赢的云端生态，推动产业互联
             网建设，助力各行各业实现数字化升级。鸿链是产业创新变革的推动者和数字化转型的赋能者。始终洞察时代发展趋势，探索软件技术的创
@@ -28,11 +48,11 @@ export default function About() {
           </div>
         </div>
 
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 justify-between text-center">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 justify-between text-center">
           {/* 1 */}
           <div className="w-full  md:w-auto flex flex-col align-center justify-center mb-6">
             <div className="flex justify-center mb-4">
-              <div className="_border_container">远景使命</div>
+              <div className="_border_container px-4">远景使命</div>
             </div>
             <div>
               <img src="/about_us/about_1.png" alt="" />
@@ -41,7 +61,7 @@ export default function About() {
           {/* 2 */}
           <div className="w-full  md:w-auto flex flex-col align-center justify-center mb-6">
             <div className="flex justify-center mb-4">
-              <div className="_border_container">社会责任</div>
+              <div className="_border_container px-4">社会责任</div>
             </div>
             <div>
               <img src="/about_us/about_2.png" alt="" />
@@ -50,36 +70,107 @@ export default function About() {
           {/* 3 */}
           <div className="w-full  md:w-auto flex flex-col align-center justify-center mb-6">
             <div className="flex justify-center mb-4">
-              <div className="_border_container">资历认证</div>
+              <div className="_border_container px-4">资历认证</div>
             </div>
             <div>
               <img src="/about_us/about_3.png" alt="" />
             </div>
           </div>
         </div>
-
+        {/* main_1 */}
+        <div className="container mx-auto  p-4 text-center ">
+          <div className="_title">投资者</div>
+        </div>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 justify-between text-center">
+          <img
+            ref={imageRef}
+            className="md:w-full h-auto"
+            src="/about_us/about_main_1x_1.png"
+            alt=""
+          />
+          <div ref={mainBgRef} className="_main_bg_1 grid md:grid-cols-3 w-full h-full">
+            <div className="more_container w-full h-auto flex flex-col items-center justify-center">
+              <ul>
+                <li>公司治理</li>
+                <li>股份变化</li>
+                <li>公司公告</li>
+                <li>财务报告</li>
+              </ul>
+              <button className="_button_more_1 px-8 py-2 hover:bg-k_Blue-1 hover:text-k_White-1 mt-4">
+                了解更多
+              </button>
+            </div>
+            <div className="w-full h-0"> </div>
+            <div className="w-full h-0"> </div>
+          </div>
+        </div>
+        {/* main_2 */}
+        <div className="container mx-auto  p-4 text-center ">
+          <div className="_title">投资者</div>
+        </div>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 justify-between text-center">
+          <img
+            ref={imageRef}
+            className="md:w-full h-auto"
+            src="/about_us/about_main_1x_2.png"
+            alt=""
+          />
+          <div ref={mainBgRef} className="_main_bg_2 grid md:grid-cols-3 w-full h-full">
+            <div className="more_container p-6 w-full h-auto flex flex-col items-start justify-evenly">
+              <div className="text-k_White-1 text-xl dark:text-k_White-1">尊重人才、发展人才</div>
+              <div className="text-k_White-1 text-left text-base  dark:text-k_White-1">
+                鸿链数字科技真诚欢迎您的加入! 在这里我们会通过成长性的薪金和福利、
+                员工持股计划、导师制完美的培训等制度的 施使这一理念成为现实
+              </div>
+              <button className="_button_more_2 px-8 py-2 text-k_White-1 hover:bg-k_White-1 hover:text-k_Blue-2 mt-4">
+                立即投递
+              </button>
+            </div>
+            <div className="w-full h-0"> </div>
+            <div className="w-full h-0"> </div>
+          </div>
+        </div>
+        <div className="h-8"></div>
         <Footer />
       </main>
       <style jsx>
         {`
+          ul li:before {
+            content: '●';
+            color: #00a0e9;
+            margin-right: 5px;
+          }
           ._title {
             font-size: 37px;
             font-family: PingFang SC;
             font-weight: bold;
-            color: #000000;
           }
           ._subtitle {
             font-size: 18px;
             font-family: PingFang SC;
             font-weight: 400;
-            color: #000000;
           }
           ._border_container {
             border: 1px solid #6bb0eb;
-            font-size: 29px;
+            font-size: 22px;
             font-family: PingFang SC;
             font-weight: bold;
-            color: #005bac;
+          }
+          ._main_bg_1 {
+            background: #eeeeee;
+          }
+          ._main_bg_2 {
+            color: #ffffff;
+            background: #005bac;
+          }
+          .more_container {
+            color: #000000;
+          }
+          ._button_more_1 {
+            border: 1px solid #00a0e9;
+          }
+          ._button_more_2 {
+            border: 1px solid #ffffff;
           }
         `}
       </style>

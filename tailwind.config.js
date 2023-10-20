@@ -12,6 +12,15 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        k_Blue: {
+          1: '#00a0e9',
+          2: '#005bac',
+        },
+        k_White: {
+          1: '#ffffff',
+        },
+      },
     },
   },
   plugins: [],

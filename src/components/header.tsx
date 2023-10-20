@@ -12,7 +12,6 @@ export default function Header() {
 
   return (
     <div className="container mx-auto">
-      {/* dark:border-gray-600  border-y*/}
       <nav className=" border-gray-200 dark:bg-slate-800 ">
         <div className="w-full mx-auto  ">
           <div className="flex justify-between h-16">
@@ -21,13 +20,6 @@ export default function Header() {
               <div className=" md:inline-block h-16 flex flex-col justify-center items-center">
                 <IwsLink href="/">
                   <Image src="/logo.svg" width="188" height="64" alt="Logo" />
-                  {/* <Image
-                    className="block h-8 w-auto cursor-pointer"
-                    height={52}
-                    width={188}
-                    src="/company_logo.png"
-                    alt="Logo"
-                  /> */}
                 </IwsLink>
               </div>
               {/* 右侧导航 */}

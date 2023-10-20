@@ -55,7 +55,7 @@ export default function Index() {
           <div className="py-2 text-center mb-4">
             <h2 className="text-center text-xl mb-2 dark:text-gray-300">产品和服务</h2>
           </div>
-          <div className="w-full md:flex justify-between">
+          {/* <div className="w-full md:flex justify-between">
             <div className="relative">
               <img
                 className="h-72 w-full md: w-2/3 mr-2 relative"
@@ -70,10 +70,11 @@ export default function Index() {
                 alt="center"
               />
             </div>
-          </div>
+          </div> */}
         </div>
         <Footer />
       </main>
+
       <style jsx>
         {`
           .index_bottom {

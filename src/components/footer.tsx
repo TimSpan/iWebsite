@@ -1,6 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#3b82f6] text-white py-8 dark:bg-slate-800">
+    // background: #313131;
+    <footer className="bg-[#3b82f6] text-white py-8 dark:bg-slate-900">
       {/* mx-auto  容器自动居中 */}
       <div className="container mx-auto grid grid-cols-1  md:grid-cols-5 gap-4">
         <div className="ml-8">
@@ -102,31 +103,5 @@ export default function Footer() {
         <p>&copy; 2023 My Website. All rights reserved.</p>
       </div>
     </footer>
-    // <footer className="bg-gray-100 border-y border-gray-200 dark:bg-slate-800 dark:border-gray-600">
-    //   <div className="mx-auto w-full max-w-screen-xl my-6 px-4">
-    //     <div className="flex flex-col sm:flex-row gap-4 justify-between ">
-    //       <div className="">
-    //         <h4 className="font-medium mb-4 text-sm dark:text-gray-50">
-    //           Copyright © {new Date().getFullYear()} Anson. All rights reserved.
-    //         </h4>
-    //         <a
-    //           className="text-gray-500 text-sm block mb-2 hover:text-gray-600 transition-colors duration-200"
-    //           target="_blank"
-    //           href="https://github.com/AnsonZnl/iWebsite"
-    //         >
-    //           Github
-    //         </a>
-    //         <a
-    //           className="text-gray-500 text-sm block mb-2 hover:text-gray-600 transition-colors duration-200"
-    //           target="_blank"
-    //           href="https://www.zhangningle.top"
-    //         >
-    //           Blog
-    //         </a>
-    //       </div>
-
-    //     </div>
-    //   </div>
-    // </footer>
   )
 }
