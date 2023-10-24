@@ -100,7 +100,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container mx-auto mt-4 text-center">
-        <p>&copy; 2023 My Website. All rights reserved.</p>
+        <p className="">江西鸿链数字科技有限公司</p>
       </div>
     </footer>
   )

@@ -85,7 +85,7 @@ export default function Header() {
             </div>
             {/* 联系电话 */}
             <div className="flex items-center space-x-4 h-16">
-              <div className="flex md:flex-row flex-wrap">
+              <div className="ml-2 flex md:flex-row flex-wrap">
                 <div>电话：</div>
                 <div>10086-10086</div>
               </div>
