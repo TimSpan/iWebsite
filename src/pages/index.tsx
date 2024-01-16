@@ -1,3 +1,4 @@
+// import '../styles/global.css'
 import Header from './../components/header'
 import Footer from './../components/footer'
 import Image from 'next/image'
@@ -181,7 +182,6 @@ export default function Index() {
               )
             })}
           </div>
-         
         </div>
 
         <div className="max-w-full mx-auto h-[663px] md:h-[663px] relative">

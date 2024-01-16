@@ -83,7 +83,7 @@ export default function Footer() {
           <ul className="space-y-2">
             <li>
               <a href="#" className="hover:text-gray-400">
-                电话：10080-10086
+                电话：18662210398
               </a>
             </li>
             <li>
